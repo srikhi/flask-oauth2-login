@@ -6,7 +6,6 @@ from flask_oauth2_login import GoogleLogin
 app = Flask(__name__)
 app.config.update(
   SECRET_KEY="secret",
-  GOOGLE_LOGIN_REDIRECT_SCHEME="http",
 )
 for config in (
   "GOOGLE_LOGIN_CLIENT_ID",
@@ -31,4 +30,4 @@ def login_failure(e):
   return jsonify(error=str(e))
 
 if __name__ == "__main__":
-  app.run(host="0.0.0.0", debug=True)
+  app.run(ssl_context='adhoc', debug=True, host='0.0.0.0', port=8443)
