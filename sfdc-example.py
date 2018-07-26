@@ -9,8 +9,8 @@ app.config.update(
   SECRET_KEY="secret",
 )
 
-consumer_key = '3MVG9iTxZANhwHQv6UZjsx.GxKwVTlpA2wpHkSjiA3Bq31wWxgTv1qkBrFuzGnvb0w3wNxfKaFOgV8FPAOxZM'
-consumer_secret = '213678871874442145'
+consumer_key = os.environ.get('SFDC_CONNECTED_APP_CONSUMER_KEY')
+consumer_secret = os.environ.get('SFDC_CONNECTED_APP_CONSUMER_SECRET')
 
 
 app.config['SFDC_CLIENT_SECRET'] = consumer_secret

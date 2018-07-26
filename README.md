@@ -1,6 +1,6 @@
 # flask-oauth2-login
 
-Simple OAuth2 Login in Flask 
+Simple OAuth2 Login in Flask
 
 ## License
 
